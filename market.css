@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  color: #505050;
+}
+
+h1 {
+  line-height: 100%;
+  margin: 0;
+}
+
+button {
+  display: inline-block;
+  padding: 5px;
+  width: 50%;
+  font-size: 20px;
+  background-color: #aabbcc;
+  color: #ffffff;
+  border: 1px solid #505080;
+}
+
+#buttons {
+  margin: 20px 0 20px 0;
+}
+
+button:first-child {
+  border-radius: 10px 0 0 10px;
+  border-right: 0;
+}
+
+button:last-child {
+  border-radius: 0 10px 10px 0;
+}
+
+#info span {
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#info span:before {
+  display: block;
+  font-size: 0.8em;
+  font-variant: small-caps;
+  border-bottom: 1px dotted #cccccc;
+  content: attr(title);
+}
+
+#info {
+  float: left;
+  width: 30%;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+#container {
+  float: left;
+  width: 70%;
+  height: 100%;
+}
+
+#settings {
+  margin-bottom: 20px;
+  border: 1px solid #505050;
+  background-color: #aabbcc;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+#settings form {
+  display: none;
+}
+
+#settings:before {
+  display: block;
+  content: "Parameters";
+  color: #f0f0f0;
+  text-align: center;
+}
+
+#settings:hover form {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+#settings:hover:before {
+  margin-bottom: 5px;
+}
+
+#settings label {
+  display: inline-block;
+  width: 40%;
+  font-size: 0.8em;
+}
+
+#settings input {
+  display: inline-block;
+  width: 60%;
+  font-size: 0.8em;
+}
