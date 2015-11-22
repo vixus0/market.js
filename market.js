@@ -238,7 +238,7 @@ function Simulation (params) {
     }
 
     market = new Market(p.nTraders, p.startWealth, p.wealthRate, p.incomeRate);
-	if (ctx) ctx.clearRect(0, 0, canvas.width, canvas.height);
+    if (ctx) ctx.clearRect(0, 0, canvas.width, canvas.height);
   }
 
   this.update = function (time) {
@@ -313,6 +313,13 @@ function setup () {
   divBtns.appendChild(resetButton);
 
   form = document.getElementById('settingsForm');
+
+  var inputs = form.getElementsByTagName('input');
+
+  for (var i=0; i<inputs.length; i++) {
+    cv = inputs[i];
+    cv.addEventListener('input', resetClick);
+  }
 
   sim.prepPage();
   params.toHTML(form);
